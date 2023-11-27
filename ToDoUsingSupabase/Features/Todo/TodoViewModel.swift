@@ -32,7 +32,7 @@ class TodoViewModel: ObservableObject {
     // CREATE
     func addToDo() async {
         do {
-            let tempToDo = ToDoModel(id: nil, title: titleTextField, isDone: false)
+            let tempToDo = ToDoModel(title: titleTextField, isDone: false)
             // 1- add to local data
             DispatchQueue.main.sync {
                 todos.append(tempToDo)
@@ -54,7 +54,7 @@ class TodoViewModel: ObservableObject {
             }
 
             // 2- update database
-            try await supabase.database.from("todos").update(todos[index]).eq("id", value: todos[index].id!).execute()
+            try await supabase.database.from("todos").update(todos[index]).eq("id", value: todos[index].id).execute()
 
         } catch {
             print(error)
@@ -71,7 +71,7 @@ class TodoViewModel: ObservableObject {
             }
             
             // 2- delte from database
-            try await supabase.database.from("todos").delete().eq("id", value: removedToDo!.id!).execute()
+            try await supabase.database.from("todos").delete().eq("id", value: removedToDo!.id).execute()
         }catch{
             
         }

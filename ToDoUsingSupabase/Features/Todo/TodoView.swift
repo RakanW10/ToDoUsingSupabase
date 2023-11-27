@@ -69,7 +69,6 @@ struct TodoView: View {
         )
 
         .onAppear {
-            print("hi")
             Task {
                 await vm.fetchToDos()
             }
