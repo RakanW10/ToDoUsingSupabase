@@ -11,12 +11,13 @@ import Supabase
 class TodoViewModel: ObservableObject {
     @Published var todos: [ToDoModel] = []
     @Published var titleTextField = ""
-    let supabase = SupabaseClient(supabaseURL: Secrets.projectURL, supabaseKey: Secrets.apiKey)
+    // NOTE: You need to write your supabaseURL & supabaseKey
+    let supabase = SupabaseClient(supabaseURL:/* هنا لازم تكتب رابط الداتا بيس حقتك*/, supabaseKey: /* هنا لازم تكتب مفتاح الداتا بيس حقتك*/)
 
     // READ
     func fetchToDos() async {
         do {
-            let postgrestResponse = try await supabase.database.from("todos").select().execute()
+            let postgrestResponse = try await supabase.database.from("Todos").select().execute()
 
             let decoder = JSONDecoder()
 
@@ -32,14 +33,14 @@ class TodoViewModel: ObservableObject {
     // CREATE
     func addToDo() async {
         do {
-            let tempToDo = ToDoModel(title: titleTextField, isDone: false)
+            let tempToDo = ToDoModel(id: UUID(), title: titleTextField, isDone: false)
             // 1- add to local data
             DispatchQueue.main.sync {
                 todos.append(tempToDo)
             }
 
             // 2- add to database
-            try await supabase.database.from("todos").insert(tempToDo).execute()
+            try await supabase.database.from("Todos").insert(tempToDo).execute()
         } catch {
             print(error)
         }
@@ -54,7 +55,7 @@ class TodoViewModel: ObservableObject {
             }
 
             // 2- update database
-            try await supabase.database.from("todos").update(todos[index]).eq("id", value: todos[index].id).execute()
+            try await supabase.database.from("Todos").update(todos[index]).eq("id", value: todos[index].id).execute()
 
         } catch {
             print(error)
@@ -71,9 +72,9 @@ class TodoViewModel: ObservableObject {
             }
             
             // 2- delte from database
-            try await supabase.database.from("todos").delete().eq("id", value: removedToDo!.id).execute()
+            try await supabase.database.from("Todos").delete().eq("id", value: removedToDo!.id).execute()
         }catch{
-            
+            print(error)
         }
     }
 }

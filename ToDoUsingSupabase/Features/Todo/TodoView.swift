@@ -12,7 +12,7 @@ struct TodoView: View {
     var body: some View {
         ZStack {
             if vm.todos.isEmpty {
-                Text("No Data 😞")
+               ProgressView()
             } else {
                 List {
                     ForEach(vm.todos.indices, id: \.self) { index in

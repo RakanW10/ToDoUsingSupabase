@@ -8,6 +8,6 @@
 import Foundation
 
 enum Secrets {
-    static let projectURL = URL(string: "https://pkotzvnhfxznpxttaguc.supabase.co")!
-    static let apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBrb3R6dm5oZnh6bnB4dHRhZ3VjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDEwNzkzMDYsImV4cCI6MjAxNjY1NTMwNn0.rzNwSBjeRVW3md9JJvP8N8lTz5aozvNORUc5fhTT3Jo"
+    static let projectURL = URL(string: "https://hcvplanlnwcsknhktpng.supabase.co")!
+    static let apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjdnBsYW5sbndjc2tuaGt0cG5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDExNTY4MzEsImV4cCI6MjAxNjczMjgzMX0.YkEFeFMtxFq_F4vkLa5BxZFQInkgIlVFdmTDn0CjYdg"
 }

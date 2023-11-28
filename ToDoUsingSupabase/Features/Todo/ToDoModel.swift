@@ -9,7 +9,7 @@ import Foundation
 
 
 struct ToDoModel: Identifiable, Codable {
-    let id: UUID = UUID()
+    let id: UUID
     let title: String
     var isDone: Bool    
 }

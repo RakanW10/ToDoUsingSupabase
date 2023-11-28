@@ -19,7 +19,6 @@
 		6827DE0E2B14EEDA00543E33 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6827DE0D2B14EEDA00543E33 /* Supabase */; };
 		6827DE1B2B14F00100543E33 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827DE1A2B14F00100543E33 /* TodoViewModel.swift */; };
 		6827DE1D2B14F01800543E33 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827DE1C2B14F01800543E33 /* ToDoModel.swift */; };
-		6827DE1F2B14F0B100543E33 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827DE1E2B14F0B100543E33 /* Secrets.swift */; };
 		6827DE252B151BCD00543E33 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827DE242B151BCD00543E33 /* FloatingActionButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		6827DDF02B14EC5A00543E33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6827DE1A2B14F00100543E33 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		6827DE1C2B14F01800543E33 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
-		6827DE1E2B14F0B100543E33 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		6827DE242B151BCD00543E33 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +69,6 @@
 		6827DDE82B14EC5900543E33 /* ToDoUsingSupabase */ = {
 			isa = PBXGroup;
 			children = (
-				6827DE222B150B0D00543E33 /* Core */,
 				6827DE202B150ABB00543E33 /* Features */,
 				6827DDE92B14EC5900543E33 /* ToDoUsingSupabaseApp.swift */,
 				6827DDED2B14EC5A00543E33 /* Assets.xcassets */,
@@ -105,14 +102,6 @@
 				6827DDEB2B14EC5900543E33 /* TodoView.swift */,
 			);
 			path = Todo;
-			sourceTree = "<group>";
-		};
-		6827DE222B150B0D00543E33 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				6827DE1E2B14F0B100543E33 /* Secrets.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		6827DE232B151BB200543E33 /* Components */ = {
@@ -206,7 +195,6 @@
 			files = (
 				6827DDEC2B14EC5900543E33 /* TodoView.swift in Sources */,
 				6827DE252B151BCD00543E33 /* FloatingActionButton.swift in Sources */,
-				6827DE1F2B14F0B100543E33 /* Secrets.swift in Sources */,
 				6827DE1D2B14F01800543E33 /* ToDoModel.swift in Sources */,
 				6827DDEA2B14EC5900543E33 /* ToDoUsingSupabaseApp.swift in Sources */,
 				6827DE1B2B14F00100543E33 /* TodoViewModel.swift in Sources */,
